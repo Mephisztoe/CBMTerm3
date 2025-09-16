@@ -465,6 +465,11 @@ namespace CBMTerm3
             {
                 switch (e.KeyCode)
                 {
+                    case Keys.Escape:
+                        Chrout(0x5F);         // C64 "←"
+                        e.SuppressKeyPress = true;
+                        break;
+
                     case Keys.Enter:
                         Chrout(0x0d);
                         e.SuppressKeyPress = true;
